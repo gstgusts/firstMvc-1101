@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:if="${author != null}" th:text="${author.getName()}"></title>
+    <title th:if="${author == null}" >Bad author</title>
+</head>
+<body>
+<p><label>Name:</label>
+    <b><span th:text="${author.getName()}"></span></b>
+</p>
+<p><label>Surname:</label>
+    <strong><span th:text="${author.getSurname()}"></span></strong>
+</p>
+<p><label>Nickname:</label>
+    <b><span th:text="${author.getNickname()}"></span></b>
+</p>
+</body>
+</html>
