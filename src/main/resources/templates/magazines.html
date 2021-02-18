@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Magazines</title>
+</head>
+<body>
+<div th:replace="navigation :: navigation"></div>
+<h1>Magazines</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Issue</th>
+        <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="magazine: ${magazines}">
+        <td th:text="${magazine.getId()}"></td>
+        <td th:text="${magazine.getName()}"></td>
+        <td th:text="${magazine.getPrice()}"></td>
+        <td th:text="${magazine.getIssueNumber()}"></td>
+        <td th:text="${magazine.getIssueDate()}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

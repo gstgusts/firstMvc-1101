@@ -16,4 +16,8 @@ public class Author extends Person {
     public String getNickname() {
         return nickname;
     }
+
+    public String getFullName() {
+        return getName() + " " + getSurname() + " " + getNickname();
+    }
 }

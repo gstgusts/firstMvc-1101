@@ -5,6 +5,7 @@
     <title>Authors</title>
 </head>
 <body>
+<div th:replace="navigation :: navigation"></div>
 <ul>
     <li th:each="author: ${authors}" >
         <a th:text="${author.getName()}" th:href="${'/authors/'+author.getId()}">Author name</a>

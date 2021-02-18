@@ -6,6 +6,7 @@
     <title th:if="${author == null}" >Bad author</title>
 </head>
 <body>
+<div th:replace="navigation :: navigation"></div>
 <p><label>Name:</label>
     <b><span th:text="${author.getName()}"></span></b>
 </p>
@@ -15,5 +16,6 @@
 <p><label>Nickname:</label>
     <b><span th:text="${author.getNickname()}"></span></b>
 </p>
+<a href="/authors">Back to authors</a>
 </body>
 </html>
